@@ -1,5 +1,5 @@
 // Made by Jgc7 (https://github.com/jgc777)
-async function fetchRepos(username, repoList) {
+async function GetReposbyUser(username, repoList) {
     repoList.innerHTML = '';
     if (username === "") {
       const errorElement = document.createElement("a");
