@@ -11,4 +11,5 @@ Get the github repos of a user. It doesn't want to work for more than 30 repos b
  <iframe src="./demo/" width="100%" height="auto">Error loading the demo</iframe>
 
 ## License
-[![License](https://img.shields.io/github/license/jgc777/WhichNumber?style=for-the-badge)](./LICENSE)
+[![License](https://img.shields.io/github/license/jgc777/Github-repos?style=for-the-badge)](./LICENSE)
+I wwould appreciate if you didn't remove the comment on the javascript code.
