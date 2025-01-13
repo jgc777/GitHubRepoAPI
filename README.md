@@ -12,4 +12,5 @@ Get the github repos of a user. It doesn't want to work for more than 30 repos b
 
 ## License
 [![License](https://img.shields.io/github/license/jgc777/Github-repos?style=for-the-badge)](./LICENSE)
-I wwould appreciate if you didn't remove the comment on the javascript code.
+
+I would appreciate if you didn't remove the comment on the javascript code.
