@@ -1,7 +1,4 @@
 // Made by Jgc7 (https://github.com/jgc777)
-// If you want to use this script, you must include it in your HTML file and add the following javascript code:
-// fetchRepos("username", document.getElementById("repo-list")); (change it for your project)
-// The script will fetch the repositories of the given username and display them in the given list element.
 async function fetchRepos(username, repoList) {
     repoList.innerHTML = '';
     if (username === "") {
