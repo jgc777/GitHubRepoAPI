@@ -1,7 +1,7 @@
 // Made by Jgc7 (https://github.com/jgc777)
 async function GetReposbyUsername(username, repoList) {
     repoList.innerHTML = '';
-    if (username.Equals("")) {
+    if (username === "") {
       const errorElement = document.createElement("a");
       errorElement.innerHTML = "No username given!";
       repoList.appendChild(errorElement);
