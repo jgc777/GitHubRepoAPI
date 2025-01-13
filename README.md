@@ -5,4 +5,5 @@ Get the github repos of a user. It doesn't want to work for more than 30 repos b
  It generates a list with the name of the repos and the link to the github pages (if it has one) or the github repo.
  
 ## Demo
- [Try the demo here](./demo/)
+(It only shows in the web. If it doesn't work click [here](./demo/).)
+ <iframe src="./demo/" width="100%" height="auto">Error loading the demo</iframe>
