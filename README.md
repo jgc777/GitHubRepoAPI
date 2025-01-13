@@ -2,7 +2,7 @@
 Get the github repos of a user. It doesn't want to work for more than 30 repos but I'm not gonna fix it. Useful for your website.
 
 ## How to use it
- Just load the script and do `fetchRepos(a, b);`, where a is the string with the username and b is the element of your html to append the list to. Check my [github pages code](https://github.com/jgc777/jgc777.github.io/blob/main/README.md?plain=1) and the [demo code](https://github.com/jgc777/GitHub-repos/blob/main/demo/index.html?plain=1)
+ Just load the script and do `fetchRepos(a, b);`, where a is the string with the username and b is the element of your html to append the list to. Check my [github pages code](https://github.com/jgc777/jgc777.github.io/blob/main/README.md?plain=1) and the [demo code](https://github.com/jgc777/GitHub-repos/blob/main/demo/index.html?plain=1).
 ## Output
  It generates a list with the name of the repos and the link to the github pages (if it has one) or the github repo.
  
