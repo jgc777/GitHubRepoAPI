@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Repos</title>
+</head>
+<body>
+  <input type="text" id="username" placeholder="Enter GitHub username">
+  <button onclick="fetchRepos()">Get Repos</button>
+  <ul id="repo-list"></ul>
+  <script>
+    async function fetchRepos() {
+      const username = document.getElementById("username").value; // Get the username from the input box
+      const repoList = document.getElementById("repo-list"); // Get the list element
+      repoList.innerHTML = ''; // Clear the list
+      const response = await fetch(`https://api.github.com/users/${username}/repos`); // Fetch all repos associated with the username
+      if (!response.ok) { // If the response is not OK (i.e. the request was not successful)
+        const errorElement = document.createElement("a");
+        errorElement.innerHTML = "Error obtaining repos";
+        repoList.appendChild(errorElement);
+        return; // Exit the script
+      }
+      const repos = await response.json(); // Parse the JSON response
+      repos.forEach(repo => {
+        const repoNameLower = repo.name.toLowerCase(); // Convert the repo name to lowercase
+        const usernameLower = username.toLowerCase(); // Convert the username to lowercase
+        if (repoNameLower === usernameLower || repoNameLower === `${usernameLower}.github.io`) return; // Skip the repo if it is the user's profile or GitHub Pages repo
+        const listItem = document.createElement("li"); // Create a list item
+        const link = document.createElement("a"); // Create a link
+        const pagesUrl = `https://${username}.github.io/${repo.name}`; // Construct the GitHub Pages URL
+        link.href = repo.has_pages ? pagesUrl : repo.html_url; // If the repo has GitHub Pages enabled, link to the GitHub Pages URL; otherwise, link to the repo
+        link.textContent = repo.name; // Set the link text to the repo name
+        listItem.appendChild(link); // Append the link to the list item
+        repoList.appendChild(listItem); // Append the list item to the list
+      });
+    }
+  </script>
+</body>
+</html>
