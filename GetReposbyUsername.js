@@ -1,7 +1,7 @@
 // Made by Jgc7 (https://github.com/jgc777)
 async function GetReposbyUsername(username, repoList) {
     repoList.innerHTML = '';
-    if (username === "") {
+    if (username.Equals("")) {
       const errorElement = document.createElement("a");
       errorElement.innerHTML = "No username given!";
       repoList.appendChild(errorElement);
@@ -19,7 +19,6 @@ async function GetReposbyUsername(username, repoList) {
       const repoNameLower = repo.name.toLowerCase();
       const usernameLower = username.toLowerCase();
       if (repoNameLower === usernameLower || repoNameLower === `${usernameLower}.github.io`) return;
-  
       const listItem = document.createElement("li");
       const link = document.createElement("a");
       const pagesUrl = `https://${username}.github.io/${repo.name}`;
