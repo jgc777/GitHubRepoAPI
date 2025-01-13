@@ -7,3 +7,6 @@ Get the github repos of a user. It doesn't want to work for more than 30 repos b
 ## Demo
 (It only shows in the web. If it doesn't work click [here](./demo/).
  <iframe src="./demo/" width="100%" height="auto">Error loading the demo</iframe>
+
+## License
+[![License](https://img.shields.io/github/license/jgc777/WhichNumber?style=for-the-badge)](./LICENSE)
