@@ -22,7 +22,7 @@ jobs:
       - env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh api
+          gh api ./
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
@@ -45,7 +45,7 @@ jobs:
       - env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh api
+          gh api ./
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
