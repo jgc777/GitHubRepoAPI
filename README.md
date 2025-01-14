@@ -17,20 +17,29 @@ Get the github repos of a user, with more options. It doesn't want to show all t
 
 ## Functions
 Here are the functions that this program includes.
+
 ### appendRepos(username, repoListElement)
  Appends the repos of a given username to a list, with the links to them ordered by pinned and starcount.
+
 ### getReposbyUsername(username)
  Returns a (not ordered) list of all the repos for a given username.
+
 ### getOrderedRepoList(username)
  Returns a (ordered by pinned an starcount) list of all the repos for a given username.
+
 ### hasGithubPages(fullRepoName)
 > Needs an API key, else returns false.
+
  Returns if (true/false) a repo (for example "jgc777/jgc777.github.io") has a github pages page.
+
 ### IsPinned(owner, repo)
 > Needs an API key, else returns false.
+
  Return if (true/false) a repo is pinned in the owners profile.
+
 ### starCount(owner, repo)
 > Needs an api key
+
  Returns the starcount of a given repo.
 
 ## Demo
