@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GetReposbyUsername Demo</title>
+  <title>GitHubRepoAPI Demo</title>
+  <!-- I know this is an actual API key -->
+  <script>const token = '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';</script>
 </head>
 <body>
-  <input type="text" id="username" placeholder="Enter GitHub username">
-  <button onclick="GetReposbyUsername(document.getElementById('username').value, document.getElementById('repo-list'))">Get Repos</button>
+  <input type="text" id="username" placeholder="GitHub username" autocomplete="off">
+  <button onclick="appendRepos(document.getElementById('username').value, 'repo-list')">Get Repos</button>
   <ul id="repo-list"></ul>
-  <script src="../GetReposbyUsername.js"></script>
+  <script src="../GitHubRepoAPI.js"></script>
 </body>
 </html>

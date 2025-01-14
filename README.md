@@ -1,11 +1,37 @@
-# GetReposbyUsername
-Get the github repos of a user. It doesn't want to show all the repos if they are more than 30 but I'm not gonna fix it.
+# GithubRepoAPI
+Get the github repos of a user, with more options. It doesn't want to show all the repos if they are more than 30. I'm working on a new version to fix this.
 
 ## How to use it
- Just load [the script](./GetReposbyUsername.js) and do `GetReposbyUsername(a, b);`, where a is the string with the username and b is the element of your html to append the list to. Check my [github pages code](https://github.com/jgc777/jgc777.github.io/blob/main/README.md?plain=1) and the [demo code](https://github.com/jgc777/GetReposbyUsername/blob/main/demo/index.html?plain=1).
+ Just load [the script](./GithubRepoAPI.js) and do `appendRepos(a, b);`. Check the Functions info down this page.
+### Example
+ ```html
+ <script src="../GitHubRepoAPI"></script> <!-- Load the API -->
+ <ul id="repo-list"></ul> <!-- Here will appear the repo list -->
+ <script>
+    const token = 'YOUR_API_KEY'; // Your API key with public repos read access
+    appendRepos("jgc777", repo-list); // Call appendRepos
+</script> <!-- Use the API to get the list -->
+ ```
 
-## Output
- It generates a list with the name of the repos and the link to the github pages (if it has one) or the github repo.
+ It may work without the API key. Also check my [github pages code](https://github.com/jgc777/jgc777.github.io/blob/main/README.md?plain=1) and the [demo code](https://github.com/jgc777/GetReposbyUsername/blob/main/demo/index.html?plain=1).
+
+## Functions
+Here are the functions that this program includes.
+### appendRepos(username, repoListElement)
+ Appends the repos of a given username to a list, with the links to them ordered by pinned and starcount.
+### getReposbyUsername(username)
+ Returns a (not ordered) list of all the repos for a given username.
+### getOrderedRepoList(username)
+ Returns a (ordered by pinned an starcount) list of all the repos for a given username.
+### hasGithubPages(fullRepoName)
+> Needs an API key, else returns false.
+ Returns if (true/false) a repo (for example "jgc777/jgc777.github.io") has a github pages page.
+### IsPinned(owner, repo)
+> Needs an API key, else returns false.
+ Return if (true/false) a repo is pinned in the owners profile.
+### starCount(owner, repo)
+> Needs an api key
+ Returns the starcount of a given repo.
 
 ## Demo
 (It only shows in the web. If it doesn't work click [here](./demo/).
