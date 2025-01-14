@@ -5,7 +5,7 @@ Get the github repos of a user, with more options. It doesn't want to show all t
  Just load [the script](./GitHubRepoAPI.js) and do `appendRepos(a, b);`. Check the Functions info down this page.
 ### Example
  ```html
- <script src="http://jgc.linkpc.net/GitHubRepoAPI)/GitHubRepoAPI.js"></script> <!-- Load the API -->
+ <script src="http://jgc.linkpc.net/GitHubRepoAPI/GitHubRepoAPI.js"></script> <!-- Load the API -->
  <ul id="repo-list"></ul> <!-- Here will appear the repo list -->
  <script>
     const token = 'YOUR_API_KEY'; // Your API key with public repos read access
