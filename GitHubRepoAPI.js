@@ -1,6 +1,4 @@
 // Made by Jgc7 (https://github.com/jgc777)
-const token = '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';
-// You can't change this key for the moment.
 async function getReposbyUsername(username) { // Get the list with the repos of a user
   username = username.toLowerCase();
   if (username === "") {
