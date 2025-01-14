@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GitHubRepoAPI Demo</title>
   <!-- I know this is an actual API key -->
-  <script>const token = fetch(`https://pastebin.com/raw/FNmrikGJ`);</script>
+  <script>const token = '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';</script>
 </head>
 <body>
-  <input type="text" id="username" placeholder="GitHub username" autocomplete="off">
-  <button onclick="appendRepos(document.getElementById('username').value, 'repo-list')">Get Repos</button>
+  <input type="search" id="username" placeholder="GitHub username" autocomplete="off">
+  <button type="submit" onclick="appendRepos(document.getElementById('username').value, document.getElementById('repo-list'))">Get User Repos</button>
   <ul id="repo-list"></ul>
   <script src="../GitHubRepoAPI.js"></script>
 </body>

@@ -28,11 +28,6 @@ Here are the functions that this program includes.
 ### getOrderedRepoList(username)
  Returns a (ordered by pinned an starcount) list of all the repos for a given username.
 
-### hasGithubPages(fullRepoName)
-> Needs an API key, else returns false.
-
- Returns if (true/false) a repo (for example "jgc777/jgc777.github.io") has a github pages page.
-
 ### IsPinned(owner, repo)
 > Needs an API key, else returns false.
 

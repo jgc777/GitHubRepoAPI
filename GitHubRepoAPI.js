@@ -32,17 +32,6 @@ async function getOrderedRepoList(username) { // Get the ordered repo list
   otherRepos = otherRepos.sort((a, b) => b.stargazers_count - a.stargazers_count); // Sort by stars
   return [...pinnedRepos, ...otherRepos];
 }
-async function hasGithubPages(fullRepoName) { // Check if a repo has a github pages site. Needs the token to work
-  const url = `https://api.github.com/repos/${fullRepoName}/pages`;
-  const response = await fetch(url, {
-    method: 'GET',
-    headers: { Authorization: `Bearer ${token}` },
-  });
-  if (response.status === 200) return true;
-  else if (response.status === 404) return false;
-  console.warn(`Error checking pages status`);
-  return false;
-}
 async function IsPinned(owner, repo) { // Check if a repo is pinned. Needs the token to work
   const query = `
     query {
@@ -87,14 +76,15 @@ async function starCount(owner, repo) { // Get the number of stars for a repo. N
   return data.length;
 }
 async function appendRepos(username, repoList) { // Append the repos to a list, ordered by pinned and stars
+  let repoListElement = repoList;
   let orderedRepoList = await getOrderedRepoList(username);
-  repoList.innerHTML = '';
+  repoListElement.innerHTML = '';
   orderedRepoList.forEach(repo => {
     const listItem = document.createElement("li");
     const link = document.createElement("a");
-    link.href = hasGithubPages() ? `https://${repo.owner.login}.github.io/${repo.name}` : repo.html_url; // Link to the repo or the github pages site
+    link.href = repo.has_pages ? `https://${repo.owner.login}.github.io/${repo.name}` : repo.html_url; // Link to the repo or the github pages site
     link.textContent = repo.name;
     listItem.appendChild(link);
-    repoList.appendChild(listItem);
+    repoListElement.appendChild(listItem);
   });
 }
