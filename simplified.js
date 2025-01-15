@@ -1,15 +1,15 @@
 // Made by Jgc7 (https://github.com/jgc777)
 async function getReposbyUsername(username) {
   username = username.toLowerCase();
-  if (!username) {
+  if (username === "") {
     console.warn(`No username provided!`);
-    return ["No username provided!"];
+    return ["Error: no username provided!"];
   }
-  const response = await fetch(`https://api.github.com/users/${username}/repos`);
-  if (response.status === 403) return ["You have exceeded the API rate limit!"];
+  const response = await fetch(`https://api.github.com/users/${username}/repos`); // Fetch the repos
+  if (response.status === 403) return ["Error: you have exceeded the API rate limit!"];
   if (!response.ok) {
     console.warn(`Error fetching repos`);
-    return ["Error fetching repos"];
+    return ["Error: couldn't fetch repos"];
   }
   const repos = await response.json();
   return repos.filter(repo => repo.name.toLowerCase() !== username && repo.name.toLowerCase() !== `${username}.github.io`);
