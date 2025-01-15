@@ -4,6 +4,10 @@ Get the github repos of a user, with more options. It doesn't want to show all t
 
 ## How to use it
  Just load [the script](./api.js) and do `appendRepos(a, b);`. Check the Functions info down this page.
+
+> [!WARNING]  
+> Each IP has a GitHub API limit of 60 requests per hour. If the user exceeds it it's going to stop working.
+
 ### Example
  ```html
  <script src="https://cdn.jsdelivr.net/gh/jgc777/GitHubRepoAPI@latest/api.js"></script> <!-- Load the API -->
@@ -14,12 +18,12 @@ Get the github repos of a user, with more options. It doesn't want to show all t
 </script> <!-- Use the API to get the list -->
  ```
 
- It may work without the API key. Also check my [github pages code](https://github.com/jgc777/jgc777.github.io/blob/main/README.md?plain=1) and the [demo code](https://github.com/jgc777/GetReposbyUsername/blob/main/demo/index.html?plain=1).
+ Also check my [github pages code](https://github.com/jgc777/jgc777.github.io/blob/main/README.md?plain=1) and the [demo code](https://github.com/jgc777/GetReposbyUsername/blob/main/demo/index.html?plain=1).
 
-### Simplified for Github Pages edition
-> `ghpagessimplified.js`
+### Simplified edition
+> `simplified.js`
 
-It's a simplified version of the code with no sorting and which automatically appends the repos of the github pages owner to the repo-list list (`<ul id="repo-list"></ul>` or similar). Works without an API key.
+It's a simplified version of the code with no sorting and which automatically appends the repos to the repo-list list element (`<ul id="repo-list"></ul>` or similar). Works without an API key but you have to specify the username in the html with `<meta name="github-username" content="your-github-username">`.
 
 ## Functions
 Here are the functions that this program includes.
@@ -39,13 +43,17 @@ Here are the functions that this program includes.
  Return if (true/false) a repo is pinned in the owners profile.
 
 ### starCount(owner, repo)
-> Needs an api key
+> Needs an API key
 
  Returns the starcount of a given repo.
 
 ## Demo
 (It only shows in the web. If it doesn't work click [here](./demo/).
  <iframe src="./demo/" width="100%" height="auto">Error loading the demo</iframe>
+
+### Simplified Version Demo
+(It only shows in the web. If it doesn't work click [here](./demo/simplified/).
+ <iframe src="./demo/simplified/" width="100%" height="auto">Error loading the simpliified demo</iframe>
 
 ## License
 [![License](https://img.shields.io/github/license/jgc777/GetReposbyUsername?style=for-the-badge)](./LICENSE)

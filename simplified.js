@@ -18,9 +18,8 @@ async function getReposbyUsername(username) {
     return ["Error fetching repos"];
   }
 }
-
 async function appendRepos() {
-  const repoList = await getReposbyUsername("{{ site.github.owner_name }}");
+  const repoList = await getReposbyUsername(getGitHubUsername());
   const repoListElement = document.getElementById('repo-list');
   if (repoListElement) {
     repoListElement.innerHTML = '';
@@ -34,7 +33,10 @@ async function appendRepos() {
     });
   }
 }
-
+function getGitHubUsername() {
+  const metaTag = document.querySelector('meta[name="github-username"]');
+  return metaTag ? metaTag.getAttribute('content') : null;
+}
 let attempts = 0;
 const intervalId = setInterval(() => {
   console.log(`Appending the repo list (attempt #${++attempts})`);
