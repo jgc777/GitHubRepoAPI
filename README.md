@@ -16,6 +16,11 @@ Get the github repos of a user, with more options. It doesn't want to show all t
 
  It may work without the API key. Also check my [github pages code](https://github.com/jgc777/jgc777.github.io/blob/main/README.md?plain=1) and the [demo code](https://github.com/jgc777/GetReposbyUsername/blob/main/demo/index.html?plain=1).
 
+### Simplified for Github Pages edition
+> `ghpagessimplified.js`
+
+It's a simplified version of the code with no sorting and which automatically appends the repos of the github pages owner to the repo-list list (`<ul id="repo-list"></ul>` or similar). Works without an API key.
+
 ## Functions
 Here are the functions that this program includes.
 
