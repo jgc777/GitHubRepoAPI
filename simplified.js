@@ -21,7 +21,7 @@ async function appendRepos() {
     repoListElement.innerHTML = '';
     repoList.forEach(repo => {
       listItem = document.createElement("li");
-      if (repo.name) {
+      if (repo.name !== undefined) {
         link = document.createElement("a");
         link.href ? repo.has_pages `https://${repo.owner.login}.github.io/${repo.name}` : repo.html_url; // Link to the repo or the github pages site
         link.textContent = repo.name ? repo.name : repo;
