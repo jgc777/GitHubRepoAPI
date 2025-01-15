@@ -1,5 +1,12 @@
 ---
 layout: default
+theme: jekyll-theme-midnight
+show_downloads: "false"
+github:
+  owner_url: http://jgc777.github.io/
+  owner_name: Jgc7
+title: ""
+description: ""
 ---
 
 <title>GitHubRepoAPI Demo</title> <!-- Title -->
