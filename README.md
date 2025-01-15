@@ -51,7 +51,7 @@ Here are the functions that this program includes.
 (It only shows in the web. If it doesn't work click [here](./demo/).
  <iframe src="./demo/" width="100%" height="auto">Error loading the demo</iframe>
 
-### Simplified Version Demo
+## Simplified Version Demo
 (It only shows in the web. If it doesn't work click [here](./demo/simplified/).
  <iframe src="./demo/simplified/" width="100%" height="auto">Error loading the simpliified demo</iframe>
 
