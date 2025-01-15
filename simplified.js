@@ -7,7 +7,7 @@ async function getReposbyUsername(username) {
   }
   try {
     const response = await fetch(`https://api.github.com/users/${username}/repos`);
-    if (response.errorcode === 403) return ["You have exceeded the API rate limit!"];
+    if (response.status === 403) return ["You have exceeded the API rate limit!"];
     if (!response.ok) {
       console.warn(`Error fetching repos`);
       return ["Error fetching repos"];
