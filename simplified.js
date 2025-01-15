@@ -5,19 +5,14 @@ async function getReposbyUsername(username) {
     console.warn(`No username provided!`);
     return ["No username provided!"];
   }
-  try {
-    const response = await fetch(`https://api.github.com/users/${username}/repos`);
-    if (response.status === 403) return ["You have exceeded the API rate limit!"];
-    if (!response.ok) {
-      console.warn(`Error fetching repos`);
-      return ["Error fetching repos"];
-    }
-    const repos = await response.json();
-    return repos.filter(repo => repo.name.toLowerCase() !== username && repo.name.toLowerCase() !== `${username}.github.io`);
-  } catch (error) {
-    console.error(`Fetch error: ${error}`);
+  const response = await fetch(`https://api.github.com/users/${username}/repos`);
+  if (response.status === 403) return ["You have exceeded the API rate limit!"];
+  if (!response.ok) {
+    console.warn(`Error fetching repos`);
     return ["Error fetching repos"];
   }
+  const repos = await response.json();
+  return repos.filter(repo => repo.name.toLowerCase() !== username && repo.name.toLowerCase() !== `${username}.github.io`);
 }
 async function appendRepos() {
   const repoList = await getReposbyUsername(getGitHubUsername());
