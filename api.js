@@ -85,7 +85,7 @@ async function appendRepos(username, repoList) { // Append the repos to a list, 
   orderedRepoList.forEach(repo => {
     const listItem = document.createElement("li");
     const link = document.createElement("a");
-    link.href = repo.name ? repo.has_pages ? `https://${repo.owner.login}.github.io/${repo.name}` : repo.html_url : null; // Link to the repo or the github pages site
+    link.href = repo.name ? repo.has_pages ? `https://${repo.owner.login}.github.io/${repo.name}` : repo.html_url : "http://".concat(repo.split(' ').join('')); // Link to the repo or the github pages site or an error
     link.textContent = repo.name ? repo.name : repo;
     listItem.appendChild(link);
     repoListElement.appendChild(listItem);
