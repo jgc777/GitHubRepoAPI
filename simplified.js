@@ -25,9 +25,13 @@ async function appendRepos() {
         link = document.createElement("a");
         link.href ? repo.has_pages `https://${repo.owner.login}.github.io/${repo.name}` : repo.html_url; // Link to the repo or the github pages site
         link.textContent = repo.name ? repo.name : repo;
-      } else listItem.innerHTML = repo;
-      listItem.appendChild(link);
-      repoListElement.appendChild(listItem);
+        listItem.appendChild(link);
+      } else {
+        errorText = document.createElement("p");
+        errorText.textContent = repo;
+        listItem.appendChild(errorText);
+      }
+    repoListElement.appendChild(listItem);
     });
   }
 }
