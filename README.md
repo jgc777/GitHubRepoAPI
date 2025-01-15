@@ -1,4 +1,4 @@
-# GithubRepoAPI
+# GitHubRepoAPI
 Get the github repos of a user, with more options. It doesn't want to show all the repos if they are more than 30. I'm working on a new version to fix this.
 ## I know the appendRepos() works but I don't know if the API ones work.
 
