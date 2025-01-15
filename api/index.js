@@ -1,4 +1,14 @@
 // Made by Jgc7 (https://github.com/jgc777)
+async function getTokenFromURL() {
+  const urlParams = new URLSearchParams(window.location.search);
+  urlToken = urlParams.get('token'); // Get the token from the URL
+  if (!urlToken) {
+    console.warn("No token provided in the URL");
+    return "";
+  }
+  return urlToken;
+}
+token = getTokenFromURL();
 async function getReposbyUsername(username) { // Get the list with the repos of a user
   username = username.toLowerCase();
   if (username === "") {
