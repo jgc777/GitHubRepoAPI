@@ -3,10 +3,10 @@ Get the github repos of a user, with more options. It doesn't want to show all t
 ## I know the appendRepos() works but I don't know if the API ones work.
 
 ## How to use it
- Just load [the script](./GitHubRepoAPI.js) and do `appendRepos(a, b);`. Check the Functions info down this page.
+ Just load [the script](./api.js) and do `appendRepos(a, b);`. Check the Functions info down this page.
 ### Example
  ```html
- <script src="https://cdn.jsdelivr.net/gh/jgc777/GitHubRepoAPI@latest/GitHubRepoAPI.js"></script> <!-- Load the API -->
+ <script src="https://cdn.jsdelivr.net/gh/jgc777/GitHubRepoAPI@latest/api.js"></script> <!-- Load the API -->
  <ul id="repo-list"></ul> <!-- Here will appear the repo list -->
  <script>
     const token = 'YOUR_API_KEY'; // Your API key with public repos read access
