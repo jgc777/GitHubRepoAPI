@@ -23,7 +23,7 @@ async function appendRepos() {
       const listItem = document.createElement("li");
       const link = document.createElement("a");
       link.href = repo.has_pages ? `https://${repo.owner.login}.github.io/${repo.name}` : repo.html_url;
-      link.textContent = repo.name;
+      link.textContent = repo.name ? repo.name : repo;
       listItem.appendChild(link);
       repoListElement.appendChild(listItem);
     });
