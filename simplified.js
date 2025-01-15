@@ -20,18 +20,18 @@ async function appendRepos() {
   if (repoListElement) {
     repoListElement.innerHTML = '';
     repoList.forEach(repo => {
-      listItem = document.createElement("li");
-      if (repo.name !== undefined) {
-        link = document.createElement("a");
-        link.href ? repo.has_pages `https://${repo.owner.login}.github.io/${repo.name}` : repo.html_url; // Link to the repo or the github pages site
-        link.textContent = repo.name ? repo.name : repo;
+      const listItem = document.createElement("li");
+      if (repo.name) {
+        const link = document.createElement("a");
+        link.href = repo.has_pages ? `https://${repo.owner.login}.github.io/${repo.name}` : repo.html_url; // Link to the repo or the GitHub Pages site
+        link.textContent = repo.name;
         listItem.appendChild(link);
       } else {
-        errorText = document.createElement("p");
+        const errorText = document.createElement("p");
         errorText.textContent = repo;
         listItem.appendChild(errorText);
       }
-    repoListElement.appendChild(listItem);
+      repoListElement.appendChild(listItem);
     });
   }
 }
