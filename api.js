@@ -23,6 +23,7 @@ async function getReposbyUsername(username) { // Get the list with the repos of 
 }
 async function getOrderedRepoList(username) { // Get the ordered repo list
   let repoList = await getReposbyUsername(username);
+  if (repoList.length === 1 && repoList[0].includes('Error')) return repoList;
   let pinnedRepos = [];
   let otherRepos = [];
   await repoList.forEach(repo => {
