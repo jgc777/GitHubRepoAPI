@@ -14,7 +14,7 @@ Get the github repos of a user, with more options. It doesn't want to show all t
 </script> <!-- Use the API to get the list -->
  ```
 
- It may work without the API key. Also check my [github pages code](https://github.com/jgc777/jgc777.github.io/blob/main/README.md?plain=1) and the [demo code](https://github.com/jgc777/GetReposbyUsername/blob/main/demo.md?plain=1) (it's an md with the html code).
+ It may work without the API key. Also check my [github pages code](https://github.com/jgc777/jgc777.github.io/blob/main/README.md?plain=1) and the [demo code](https://github.com/jgc777/GetReposbyUsername/blob/main/demo/index.html?plain=1).
 
 ## Functions
 Here are the functions that this program includes.
@@ -39,8 +39,8 @@ Here are the functions that this program includes.
  Returns the starcount of a given repo.
 
 ## Demo
-(It only shows in the web. If it doesn't work click [here](./demo).
- <iframe src="./demo" width="100%" height="auto">Error loading the demo</iframe>
+(It only shows in the web. If it doesn't work click [here](./demo/).
+ <iframe src="./demo/" width="100%" height="auto">Error loading the demo</iframe>
 
 ## License
 [![License](https://img.shields.io/github/license/jgc777/GetReposbyUsername?style=for-the-badge)](./LICENSE)
