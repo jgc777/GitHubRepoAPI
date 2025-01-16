@@ -3,6 +3,8 @@ Get the github repos of a user, with more options. It doesn't want to show all t
 
 ## How to use it
  Just load [the script](./api.js) and do `appendRepos(a, b);`. Check the Functions info down this page.
+ ### Looking for a easy-to-use version?
+ Check [the simplified edition](./#simplified-edition)
 
 > [!IMPORTANT] 
 > Each IP has a GitHub API limit of 60 requests per hour. If the user exceeds it it's going to stop working.
@@ -16,8 +18,6 @@ Get the github repos of a user, with more options. It doesn't want to show all t
     appendRepos("jgc777", repo-list); // Call appendRepos
 </script> <!-- Use the API to get the list -->
  ```
-
- Also check my [github pages code](https://github.com/jgc777/jgc777.github.io/blob/main/README.md?plain=1) and the [demo code](https://github.com/jgc777/GetReposbyUsername/blob/main/demo/index.html?plain=1).
 
 ### Simplified edition
 > `simplified.js`
@@ -55,6 +55,4 @@ Here are the functions that this program includes.
  <iframe src="./demo/simplified/" width="100%" height="auto">Error loading the simpliified demo</iframe>
 
 ## License
-[![License](https://img.shields.io/github/license/jgc777/GetReposbyUsername?style=for-the-badge)](./LICENSE)
-
-I would appreciate if you didn't remove the comment on the javascript code.
+Check the [license](./LICENSE).

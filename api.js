@@ -1,4 +1,5 @@
 // Made by Jgc7 (https://github.com/jgc777)
+console.log("GithubRepoAPI by Jgc7 loaded");
 const currentScript = Array.from(document.scripts).find(script => script.src.includes('api.js'));
 const token = new URL(currentScript.src).searchParams.get('token'); // Get the token from the script URL
 async function getReposbyUsername(username) { // Get the list with the repos of a user
@@ -7,19 +8,14 @@ async function getReposbyUsername(username) { // Get the list with the repos of 
     console.warn(`No username provided!`);
     return ["Error: no username provided!"];
   }
-  const response = await fetch(`https://api.github.com/users/${username}/repos`); // Fetch the repos
+  response = await fetch(`https://api.github.com/users/${username}/repos`);
   if (response.status === 403) return ["Error: you have exceeded the API rate limit!"];
-  if (!response.ok) {
-    console.warn(`Error fetching repos`);
-    return ["Error: couldn't fetch repos"];
-  }
-  const repos = await response.json();
-  let repoList = [];
-  repos.forEach(repo => {
-      if (repo.name.toLowerCase() === username || repo.name.toLowerCase() === `${username}.github.io`) return; // Skip the user's profile repo and github pages repo
-      repoList.push(repo);
-  });
-  return repoList;
+  if (response.ok) {
+    const repos = await response.json();
+    return repos.filter(repo => repo.name.toLowerCase() !== username && repo.name.toLowerCase() !== `${username}.github.io`);
+  } 
+  console.warn(`Error fetching repos`);
+  return ["Error: couldn't fetch repos"];
 }
 async function getOrderedRepoList(username) { // Get the ordered repo list
   let repoList = await getReposbyUsername(username);
@@ -81,6 +77,7 @@ async function starCount(owner, repo) { // Get the number of stars for a repo. N
 }
 async function appendRepos(username, repoList) { // Append the repos to a list, ordered by pinned and stars
   let repoListElement = repoList;
+  if (!repoListElement) console.error(`Couldn't find the repo list element!`);
   let orderedRepoList = await getOrderedRepoList(username);
   repoListElement.innerHTML = '';
   orderedRepoList.forEach(repo => {
