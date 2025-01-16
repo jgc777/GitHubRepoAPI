@@ -79,7 +79,6 @@ async function appendRepos(username, repoList) { // Append the repos to a list, 
   let repoListElement = repoList;
   if (!repoListElement) console.error(`Couldn't find the repo list element!`);
   let orderedRepoList = await getOrderedRepoList(username);
-  repoListElement.innerHTML = '';
   orderedRepoList.forEach(repo => {
     const listItem = document.createElement("li");
       if (repo.name) {
