@@ -55,4 +55,4 @@ Here are the functions that this program includes.
  <iframe src="./demo/simplified/" width="100%" height="auto">Error loading the simpliified demo</iframe>
 
 ## License
-Check the [license](./LICENSE).
+Check the license [here](./LICENSE).
