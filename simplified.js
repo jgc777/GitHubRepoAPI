@@ -19,6 +19,7 @@ async function appendRepos() {
   const repoList = await getRepos();
   const repoListElement = document.getElementById('repo-list');
   if (repoListElement) {
+    repoListElement.innerHTML = '';
     repoList.forEach(repo => {
       const listItem = document.createElement("li");
       if (repo.name) {
