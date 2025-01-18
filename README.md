@@ -21,7 +21,7 @@ Get the github repos of a user, with more options. It doesn't want to show all t
 > `simplified.js`
 
  ```html
- <meta name="github-username" content="YOUR_GH_USERNAME">
+ <meta name="github-username" content="YOUR_GH_USERNAME"> <!-- Define the user whose repos must be shown -->
  <script src="https://cdn.jsdelivr.net/gh/jgc777/GitHubRepoAPI@main/smplified.js"></script> <!-- Load the Simplified API -->
  <ul id="repo-list"></ul> <!-- Here will appear the repo list -->
  ```
