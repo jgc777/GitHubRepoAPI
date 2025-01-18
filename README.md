@@ -13,7 +13,7 @@ Get the github repos of a user, with more options. It doesn't want to show all t
  <ul id="repo-list"></ul> <!-- Here will appear the repo list -->
  <script>
     const token = 'YOUR_API_KEY'; // Your API key with public repos read access
-    appendRepos("jgc777", repo-list); // Call appendRepos
+    appendRepos("YOUR_GH_USERNAME", repo-list); // Call appendRepos
 </script> <!-- Use the API to get the list -->
  ```
 
@@ -21,7 +21,7 @@ Get the github repos of a user, with more options. It doesn't want to show all t
 > `simplified.js`
 
  ```html
- <meta name="github-username" content="jgc777">
+ <meta name="github-username" content="YOUR_GH_USERNAME">
  <script src="https://cdn.jsdelivr.net/gh/jgc777/GitHubRepoAPI@main/smplified.js"></script> <!-- Load the Simplified API -->
  <ul id="repo-list"></ul> <!-- Here will appear the repo list -->
  ```
