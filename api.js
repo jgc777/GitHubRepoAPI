@@ -12,7 +12,7 @@ async function getReposbyUsername(username) { // Get the list with the repos of 
   if (response.status === 403) return ["Error: you have exceeded the API rate limit!"];
   if (response.ok) {
     const repos = await response.json();
-    return repos.filter(repo => repo.name.toLowerCase() !== username && repo.name.toLowerCase() !== `${username}.github.io`);
+    return repos;
   } 
   console.warn(`Error fetching repos`);
   return ["Error: couldn't fetch repos"];
@@ -75,23 +75,26 @@ async function starCount(owner, repo) { // Get the number of stars for a repo. N
   const data = await response.json();
   return data.length;
 }
-async function appendRepos(username, repoList) { // Append the repos to a list, ordered by pinned and stars
-  let repoListElement = repoList;
-  if (!repoListElement) console.error(`Couldn't find the repo list element!`);
-  let orderedRepoList = await getSortedRepoList(username);
-  repoListElement.innerHTML = '';
-  orderedRepoList.forEach(repo => {
-    const listItem = document.createElement("li");
+async function appendRepos(username, repoListElement) { // Append the repos to a list, ordered by pinned and stars
+  repoList = await getSortedRepoList(username);
+  if (repoListElement) {
+    repoListElement.innerHTML = '';
+    repoList.forEach(repo => {
+      const listItem = document.createElement("li");
       if (repo.name) {
-        const link = document.createElement("a");
-        link.href = repo.has_pages ? `https://${repo.owner.login}.github.io/${repo.name}` : repo.html_url; // Link to the repo or the GitHub Pages site
-        link.textContent = repo.name;
-        listItem.appendChild(link);
+        if (repo.name.toLowerCase() !== username && repo.name.toLowerCase() !== `${username}.github.io`) {
+          const link = document.createElement("a");
+          link.href = repo.has_pages ? `https://${repo.owner.login}.github.io/${repo.name}` : repo.html_url;
+          link.textContent = repo.name;
+          listItem.appendChild(link);
+          repoListElement.appendChild(listItem);
+        } else console.log(`Skipping the repo "${repo.name}"`);
       } else {
         const errorText = document.createElement("p");
         errorText.textContent = repo;
         listItem.appendChild(errorText);
+        repoListElement.appendChild(listItem);
       }
-      repoListElement.appendChild(listItem);
-  });
+    });
+  } else console.error(`Couldn't find the repo list element!`);
 }
