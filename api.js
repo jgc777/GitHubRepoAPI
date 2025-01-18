@@ -17,7 +17,7 @@ async function getReposbyUsername(username) { // Get the list with the repos of 
   console.warn(`Error fetching repos`);
   return ["Error: couldn't fetch repos"];
 }
-async function getOrderedRepoList(username) { // Get the ordered repo list
+async function getSortedRepoList(username) { // Get the ordered repo list
   let repoList = await getReposbyUsername(username);
   if (repoList.length === 1 && repoList[0].includes('Error')) return repoList;
   let pinnedRepos = [];
@@ -78,7 +78,7 @@ async function starCount(owner, repo) { // Get the number of stars for a repo. N
 async function appendRepos(username, repoList) { // Append the repos to a list, ordered by pinned and stars
   let repoListElement = repoList;
   if (!repoListElement) console.error(`Couldn't find the repo list element!`);
-  let orderedRepoList = await getOrderedRepoList(username);
+  let orderedRepoList = await getSortedRepoList(username);
   repoListElement.innerHTML = '';
   orderedRepoList.forEach(repo => {
     const listItem = document.createElement("li");

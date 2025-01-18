@@ -33,7 +33,7 @@ Here are the functions that this program includes.
 ### getReposbyUsername(username)
  Returns a (not ordered) list of all the repos for a given username.
 
-### getOrderedRepoList(username)
+### getSortedRepoList(username)
  Returns a (ordered by pinned an starcount) list of all the repos for a given username.
 
 ### IsPinned(owner, repo)
