@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GitHubRepoAPI Demo</title>
   <script src="./defaultapikey.js"></script>
 </head>
 <body>
-  <input type="search" id="username" placeholder="GitHub username" autocomplete="off">
-  <button type="submit" onclick="appendRepos(document.getElementById('username').value, document.getElementById('repo-list'))">Get User Repos</button>
+  <input type="search" id="username" placeholder="GitHub username">
+  <button onclick="appendRepos(document.getElementById('username').value, document.getElementById('repo-list'))">Get User Repos</button>
   <ul id="repo-list"></ul>
   <a href="https://github.com/jgc777/GitHubRepoAPI/blob/main/demo/index.html">See the code</a>
 </body>
