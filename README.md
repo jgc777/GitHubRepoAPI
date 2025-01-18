@@ -11,7 +11,7 @@ Get the github repos of a user, with more options. It doesn't want to show all t
 
 ### Example
  ```html
- <script src="https://cdn.jsdelivr.net/gh/jgc777/GitHubRepoAPI@latest/api.js"></script> <!-- Load the API -->
+ <script src="https://cdn.jsdelivr.net/gh/jgc777/GitHubRepoAPI@main/api.js"></script> <!-- Load the API -->
  <ul id="repo-list"></ul> <!-- Here will appear the repo list -->
  <script>
     const token = 'YOUR_API_KEY'; // Your API key with public repos read access
@@ -19,8 +19,14 @@ Get the github repos of a user, with more options. It doesn't want to show all t
 </script> <!-- Use the API to get the list -->
  ```
 
-### Simplified edition
+#### Simplified edition
 > `simplified.js`
+
+ ```html
+ <meta name="github-username" content="jgc777">
+ <script src="https://cdn.jsdelivr.net/gh/jgc777/GitHubRepoAPI@main/smplified.js"></script> <!-- Load the Simplified API -->
+ <ul id="repo-list"></ul> <!-- Here will appear the repo list -->
+ ```
 
 It's a simplified version of the code with no sorting and which automatically appends the repos to the repo-list list element (`<ul id="repo-list"></ul>` or similar). Works without an API key but you have to specify the username in the html with `<meta name="github-username" content="your-github-username">`.
 
