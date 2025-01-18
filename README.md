@@ -8,8 +8,8 @@ Get the github repos of a user, with more options. It doesn't want to show all t
 ## How to use it
  Just load [the script](./api.js) and do `appendRepos(a, b);` (or use [the simplified edition](./#simplified-edition)).
 
-> [!IMPORTANT] 
-> Each IP has a GitHub API limit of 60 requests per hour. If the user exceeds it it's going to stop working.
+> [!IMPORTANT]
+> Each IP has a GitHub API rate limit of 60 requests per hour.
 
 ### Example
  ```html
