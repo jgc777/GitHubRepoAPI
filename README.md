@@ -1,4 +1,7 @@
 # GitHubRepoAPI
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github)
+![API](https://img.shields.io/badge/API-black?style=for-the-badge)
+
 Get the github repos of a user, with more options. It doesn't want to show all the repos if they are more than 30. If I fixed it it wouldn't work without an API key. I know the appendRepos() works but I don't know if the API ones completely work.
 
 ## How to use it
@@ -9,7 +12,7 @@ Get the github repos of a user, with more options. It doesn't want to show all t
 
 ### Example
  ```html
- <script src="https://cdn.jsdelivr.net/gh/jgc777/GitHubRepoAPI@main/api.js"></script> <!-- Load the API -->
+ <script src="https://jgc.linkpc.net/GitHubRepoAPI/api.js"></script> <!-- Load the API -->
  <ul id="repo-list"></ul> <!-- Here will appear the repo list -->
  <script>
     const token = 'YOUR_API_KEY'; // Your API key with public repos read access
@@ -22,7 +25,7 @@ Get the github repos of a user, with more options. It doesn't want to show all t
 
  ```html
  <meta name="github-username" content="YOUR_GH_USERNAME"> <!-- Define the user whose repos must be shown -->
- <script src="https://cdn.jsdelivr.net/gh/jgc777/GitHubRepoAPI@main/smplified.js"></script> <!-- Load the Simplified API -->
+ <script src="https://jgc.linkpc.net/GitHubRepoAPI/smplified.js"></script> <!-- Load the Simplified API -->
  <ul id="repo-list"></ul> <!-- Here will appear the repo list -->
  ```
 
