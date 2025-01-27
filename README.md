@@ -1,7 +1,7 @@
 # GitHubRepoAPI
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github)
 ![API](https://img.shields.io/badge/API-black?style=for-the-badge)
-[![API](https://img.shields.io/badge/Custom_LICENSE-black?style=for-the-badge)](./LICENSE)
+[![LICENSE](https://img.shields.io/badge/Custom_LICENSE-black?style=for-the-badge)](./LICENSE)
 
 Get the github repos of a user, with more options. It doesn't want to show all the repos if they are more than 30. If I fixed it it wouldn't work without an API key. I know the appendRepos() works but I don't know if the API ones completely work.
 
