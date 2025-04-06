@@ -1,5 +1,5 @@
 // Made by Jgc7 (https://github.com/jgc777)
-console.log("Simplified GithubRepoAPI (https://jgc.linkpc.net/GitHubRepoAPI) loaded");
+console.log("Simplified GithubRepoAPI (https://jgc.corefn.xyz/GitHubRepoAPI) loaded");
 const username = document.querySelector('meta[name="github-username"]').getAttribute('content').toLowerCase();
 async function getRepos() {
   if (username === "") {
@@ -28,7 +28,7 @@ async function appendRepos() {
       if (repo.name) {
         if (repo.name.toLowerCase() !== username && repo.name.toLowerCase() !== `${username}.github.io`) {
         const link = document.createElement("a");
-        link.href = repo.has_pages ? `https://${repo.owner.login}.github.io/${repo.name}` : repo.html_url;
+        link.href = repo.homepage ? repo.homepage: repo.has_pages ? `https://${repo.owner.login}.github.io/${repo.name}` : repo.html_url;
         link.textContent = repo.name;
         listItem.appendChild(link);
         repoListElement.appendChild(listItem);

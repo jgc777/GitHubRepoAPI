@@ -1,5 +1,5 @@
 // Made by Jgc7 (https://github.com/jgc777)
-console.log("GithubRepoAPI (https://jgc.linkpc.net/GitHubRepoAPI) loaded");
+console.log("GithubRepoAPI (https://jgc.corefn.xyz/GitHubRepoAPI) loaded");
 const currentScript = Array.from(document.scripts).find(script => script.src.includes('api.js'));
 const token = new URL(currentScript.src).searchParams.get('token'); // Get the token from the script URL
 async function getReposbyUsername(username) { // Get the list with the repos of a user
@@ -84,7 +84,7 @@ async function appendRepos(username, repoListElement) { // Append the repos to a
       if (repo.name) {
         if (repo.name.toLowerCase() !== username && repo.name.toLowerCase() !== `${username}.github.io`) {
           const link = document.createElement("a");
-          link.href = repo.has_pages ? `https://${repo.owner.login}.github.io/${repo.name}` : repo.html_url;
+          link.href = repo.homepage ? repo.homepage: repo.has_pages ? `https://${repo.owner.login}.github.io/${repo.name}` : repo.html_url;
           link.textContent = repo.name;
           listItem.appendChild(link);
           repoListElement.appendChild(listItem);
