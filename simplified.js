@@ -1,5 +1,5 @@
 // Made by Jgc7 (https://github.com/jgc777)
-console.log("Simplified GithubRepoAPI (https://jgc.corefn.xyz/GitHubRepoAPI) loaded");
+console.log("Simplified GithubRepoAPI (https://jgc777.github.io/GitHubRepoAPI) loaded");
 const username = document.querySelector('meta[name="github-username"]').getAttribute('content').toLowerCase();
 async function getRepos() {
   if (username === "") {

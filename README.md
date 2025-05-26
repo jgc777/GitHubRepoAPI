@@ -22,7 +22,7 @@ Get the github repos of a user, with more options. It doesn't want to show all t
  ```
 
 ### Simplified edition
-> [`simplified.js`](http://jgc.corefn.xyz/GitHubRepoAPI/simplified.js)
+> [`simplified.js`](http://jgc777.github.io/GitHubRepoAPI/simplified.js)
 
  ```html
  <meta name="github-username" content="YOUR_GH_USERNAME"> <!-- Define the user whose repos must be shown -->
@@ -55,13 +55,13 @@ Here are the functions that this program includes.
  Returns the starcount of a given repo.
 
 ## Demo
-<a hidden href="https://jgc.corefn.xyz/GitHubRepoAPI/">Only availabe on the web!</a>
+<a hidden href="https://jgc777.github.io/GitHubRepoAPI/">Only availabe on the web!</a>
 
 If it doesn't work click [here](./demo/).
  <iframe src="./demo/" width="100%" height="auto">Error loading the demo</iframe>
 
 ## Simplified Version Demo
-<a hidden href="https://jgc.corefn.xyz/GitHubRepoAPI/">Only availabe on the web!</a>
+<a hidden href="https://jgc777.github.io/GitHubRepoAPI/">Only availabe on the web!</a>
 
 If it doesn't work click [here](./demo/simplified/).
 <iframe src="./demo/simplified/" width="100%" height="auto">Error loading the simpliified demo</iframe>

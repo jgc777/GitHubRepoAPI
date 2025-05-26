@@ -1,5 +1,5 @@
 // Made by Jgc7 (https://github.com/jgc777)
-console.log("GithubRepoAPI (https://jgc.corefn.xyz/GitHubRepoAPI) loaded");
+console.log("GithubRepoAPI (https://jgc777.github.io/GitHubRepoAPI) loaded");
 const currentScript = Array.from(document.scripts).find(script => script.src.includes('api.js'));
 const token = new URL(currentScript.src).searchParams.get('token'); // Get the token from the script URL
 async function getReposbyUsername(username) { // Get the list with the repos of a user
